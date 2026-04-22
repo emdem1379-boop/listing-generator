@@ -1,0 +1,15 @@
+export function requiredEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value;
+}
+
+export function getAppUrl(): string {
+  return process.env.APP_URL || 'http://localhost:3000';
+}
+
+export function getOpenAIModel(): string {
+  return process.env.OPENAI_MODEL || 'gpt-5-mini';
+}
