@@ -1,98 +1,25 @@
-:root {
-  --bg: #0b1020;
-  --card: #131a2e;
-  --card-alt: #111729;
-  --text: #e8edf7;
-  --muted: #a7b1c7;
-  --border: rgba(255,255,255,.1);
-  --accent: #7c9cff;
-  --accent-2: #d8e2ff;
-  --shadow: 0 20px 60px rgba(0,0,0,.25);
-}
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #0b1020 0%, #0d1325 100%);
-  color: var(--text);
-}
-a { color: inherit; text-decoration: none; }
-.container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
-.narrow { width: min(900px, calc(100% - 32px)); }
-.siteHeader {
-  position: sticky; top: 0; z-index: 20;
-  backdrop-filter: blur(12px);
-  background: rgba(11,16,32,.7);
-  border-bottom: 1px solid var(--border);
-}
-.headerInner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.brand { font-weight: 800; letter-spacing: -0.02em; }
-.nav { display: flex; gap: 18px; color: var(--muted); }
-.hero { padding: 64px 0 40px; }
-.heroGrid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center; }
-.hero h1, .pageIntro h1 { font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.02; margin: 10px 0 16px; letter-spacing: -0.04em; }
-.eyebrow { color: #9fb1ff; font-size: .9rem; text-transform: uppercase; letter-spacing: .14em; }
-.lede { color: var(--muted); font-size: 1.1rem; line-height: 1.7; max-width: 62ch; }
-.lede.small { font-size: 1rem; }
-.heroActions { display: flex; gap: 12px; margin-top: 24px; }
-.button {
-  appearance: none; border: 1px solid transparent; border-radius: 12px;
-  padding: 12px 18px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-}
-.button.primary { background: var(--accent); color: #09101f; }
-.button.secondary { background: transparent; border-color: var(--border); color: var(--text); }
-.button.block { width: 100%; }
-.button.small { padding: 10px 14px; font-size: .95rem; }
-.card {
-  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: var(--shadow);
-}
-.exampleCard p { line-height: 1.7; }
-.muted { color: var(--muted); }
-.microcopy { color: var(--muted); font-size: .95rem; margin-top: 10px; }
-.pill {
-  display: inline-flex; align-items: center; border: 1px solid rgba(124,156,255,.35);
-  padding: 6px 10px; border-radius: 999px; font-size: .82rem; color: #c8d6ff; background: rgba(124,156,255,.08);
-}
-.section { padding: 32px 0 72px; }
-.section.alt { background: rgba(255,255,255,.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.threeUp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.pricingWrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; align-items: start; }
-.pricingGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.pricingCard ul { padding-left: 18px; color: var(--muted); line-height: 1.8; }
-.featured { outline: 1px solid rgba(124,156,255,.25); }
-.price { font-size: 2rem; font-weight: 800; margin: 10px 0; }
-.pageIntro { margin-bottom: 20px; }
-.toolLayout { display: grid; grid-template-columns: .95fr 1.05fr; gap: 20px; align-items: start; }
-.statusRow { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
-.formStack { display: grid; gap: 16px; }
-label { display: grid; gap: 8px; font-weight: 600; }
-input, select, textarea {
-  width: 100%; border-radius: 12px; border: 1px solid var(--border); background: var(--card-alt);
-  color: var(--text); padding: 12px 14px; font: inherit;
-}
-textarea { resize: vertical; }
-.twoCol { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.outputCard h2 { margin-top: 0; }
-.outputStack { display: grid; gap: 18px; }
-.label { font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: #9fb1ff; margin-bottom: 8px; }
-.tagWrap { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag { background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 999px; padding: 8px 10px; color: var(--accent-2); }
-.errorText { color: #ff9f9f; margin: 0; }
-.centeredCard { text-align: center; padding: 48px 24px; }
-
-@media (max-width: 900px) {
-  .heroGrid, .pricingWrap, .toolLayout, .threeUp, .pricingGrid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 640px) {
-  .twoCol, .headerInner { grid-template-columns: 1fr; }
-  .headerInner { display: grid; gap: 8px; }
-  .nav { gap: 12px; flex-wrap: wrap; }
-  .heroActions, .statusRow { flex-direction: column; align-items: stretch; }
+{
+  "name": "listing-kit-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "openai": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "stripe": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
 }
